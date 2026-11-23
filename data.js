@@ -7,41 +7,41 @@ const DATA = {
   role: "Junior DevOps Engineer",
   location: "Mandaluyong City, Metro Manila",
   email: "mjespaldon12@gmail.com",
-  github: "https://github.com/",          // TODO: your GitHub URL
-  linkedin: "https://www.linkedin.com/",  // TODO: your LinkedIn URL
-  formspree: "https://formspree.io/f/YOUR_FORM_ID", // TODO: create a form at formspree.io
-  about: "IT graduate with hands-on training in Linux, Bash, Git/GitHub, Docker, NGINX, Tomcat, AWS, GCP, and Terraform. Backed by internship experience in Linux server support, troubleshooting, and testing. Comfortable at the command line, reading errors, and fixing issues step by step. Open to on-site, hybrid, or remote roles.",
-  skills: ["Linux", "Bash", "Python", "PowerShell", "Git / GitHub", "GitHub Actions", "Docker", "Docker Compose", "AWS", "GCP", "Terraform", "NGINX", "Apache Tomcat", "Maven", "MySQL", "Jira"],
+  github: "https://github.com/MarkJamesEspaldon12",
+  linkedin: "",
+  formspree: "https://formspree.io/f/YOUR_FORM_ID",
+  about: "IT graduate with hands-on training in Linux, Bash, Git/GitHub, GitHub Actions, Docker, NGINX, Tomcat, and GCP basics, backed by internship experience in Linux server support and testing. Comfortable at the command line, reading errors, and fixing issues step by step. Currently learning AWS and Terraform. Open to on-site, hybrid, or remote roles.",
+  skills: ["Linux", "Bash", "Python", "PowerShell", "Git / GitHub", "GitHub Actions", "Docker", "Docker Compose", "NGINX", "Apache Tomcat", "Maven", "GCP (gcloud, IAM)", "MySQL", "Jira"],
   projects: [
     {
-      title: "Cloud Web Servers with Terraform & GitHub Actions",
+      title: "DevOps Portfolio with FAQ Chatbot on GitHub Pages",
       year: "2026",
-      tags: ["Terraform", "AWS", "GCP", "GitHub Actions"],
-      desc: "Provisioned an AWS EC2 web server (security group, NGINX via user data) and a GCP Compute Engine VM with Terraform using variables, outputs, and S3 remote state. A GitHub Actions workflow runs terraform plan on PRs and apply on merge to main, with secrets in GitHub Secrets.",
-      images: ["assets/img/terraform-1.png", "assets/img/terraform-2.png", "assets/img/terraform-3.png"],
-      link: ""
+      tags: ["GitHub Actions", "GitHub Pages", "JavaScript", "Git"],
+      desc: "This site. A browser-only FAQ chatbot (no API, zero cost) answers from the same data file as the page. Changes go through feature branches and pull requests; a GitHub Actions workflow checks the files, then deploys to GitHub Pages on merge to main.",
+      images: ["assets/img/site-1.png", "assets/img/site-2.png"],
+      link: "https://github.com/MarkJamesEspaldon12/MarkJamesEspaldon12.github.io"
     },
     {
       title: "CI/CD Pipeline: Lint, Test, Build & Push",
-      year: "2024",
-      tags: ["GitHub Actions", "Docker", "Docker Hub"],
-      desc: "Helped build GitHub Actions pipelines that lint, test, build, and push Docker images to Docker Hub, using branch protection and pull request workflow. Docker Compose for local app and database setups.",
+      year: "2026",
+      tags: ["GitHub Actions", "Docker", "Docker Hub", "pytest"],
+      desc: "One pipeline for a Python app: flake8 and pytest run on every pull request; on merge to main it builds a Docker image and pushes it to Docker Hub tagged with the commit SHA. Protected main branch (required check + PR), secrets in GitHub Secrets, and dev/staging/prod environments with a manual approval gate for prod.",
       images: ["assets/img/cicd-1.png", "assets/img/cicd-2.png"],
+      link: "https://github.com/MarkJamesEspaldon12/cicd-lab"
+    },
+    {
+      title: "Java App on Tomcat behind NGINX, with Release & Rollback",
+      year: "2026",
+      tags: ["Docker Compose", "NGINX", "Tomcat", "Maven", "GitFlow"],
+      desc: "Multi-stage Docker build compiles a Maven WAR and runs it on Tomcat behind an NGINX reverse proxy, with only the proxy port exposed. Releases follow GitFlow (release/ and hotfix/ branches, annotated tags); the WAR is built from a tag, and rollback means redeploying the previous tag.",
+      images: ["assets/img/tomcat-1.png", "assets/img/tomcat-2.png"],
       link: ""
     },
     {
-      title: "NGINX Reverse Proxy for Tomcat Apps",
-      year: "2024",
-      tags: ["Linux", "NGINX", "Tomcat", "UFW"],
-      desc: "Set up an Ubuntu Server VM with a sudo admin user and SSH key-only login, installed NGINX as a reverse proxy for Java apps on Apache Tomcat, and locked the firewall to ports 22 and 80 with UFW.",
-      images: ["assets/img/nginx-1.png", "assets/img/nginx-2.png"],
-      link: ""
-    },
-    {
-      title: "Server Health Check & Log Cleanup Scripts",
-      year: "2024",
-      tags: ["Bash", "Python", "PowerShell", "cron"],
-      desc: "Bash scripts checking disk, memory, CPU, and website status, plus Python and PowerShell scripts for log retention and file cleanup, all scheduled with crontab.",
+      title: "Linux Server Scripts: Disk Alert & Network Check",
+      year: "2026",
+      tags: ["Bash", "Linux", "cron", "exit codes"],
+      desc: "disk_alert.sh checks disk usage against a threshold, logs every run, and returns exit codes that monitoring tools can read. A layered network check (DNS, ping, port, HTTP) writes a report for incident tickets.",
       images: ["assets/img/scripts-1.png", "assets/img/scripts-2.png"],
       link: ""
     }
