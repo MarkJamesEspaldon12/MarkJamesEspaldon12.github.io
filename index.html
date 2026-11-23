@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mark James Espaldon | DevOps</title>
+<meta name="description" content="Portfolio of Mark James Espaldon, Junior DevOps Engineer.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav"><div class="nav-in">
+  <a href="#top" class="logo"><img src="assets/logo.svg" alt="" width="34" height="34"><span>Mark James<b>.</b></span></a>
+  <nav><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a href="analyst.html" class="switch">Data Analyst ↗</a></nav>
+</div></header>
+
+<main id="top">
+  <section class="hero">
+    <span class="hello">$ whoami</span>
+    <h1 id="name"></h1>
+    <p class="role" id="role"></p>
+    <p id="about"></p>
+    <div class="btns">
+      <a class="btn" href="assets/resume.pdf" download>Download Resume</a>
+      <a class="btn ghost" href="assets/resume.pdf" target="_blank">View</a>
+      <a class="btn ghost" href="#contact">Message me</a>
+    </div>
+    <ul class="chips" id="skills"></ul>
+  </section>
+
+  <section id="projects"><h2>Projects</h2><div id="project-list"></div></section>
+
+  <section id="experience"><h2>Experience</h2><div id="exp-list"></div><p class="muted" id="edu"></p></section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="muted">Send me a message and it goes straight to my inbox.</p>
+    <form id="form" method="POST">
+      <input name="name" placeholder="Your name" required>
+      <input name="email" type="email" placeholder="Your email" required>
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <button class="btn" type="submit">Send</button>
+      <p id="status" class="muted"></p>
+    </form>
+    <p class="links" id="links"></p>
+  </section>
+</main>
+<footer class="muted">© <span id="yr"></span> <span id="fname"></span></footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
