@@ -8,7 +8,7 @@ $("about").textContent = D.about;
 $("yr").textContent = new Date().getFullYear();
 $("edu").textContent = D.education;
 $("skills").innerHTML = D.skills.map(s => `<li>${esc(s)}</li>`).join("");
-$("links").innerHTML = `<a href="mailto:${D.email}">${D.email}</a><a href="${D.github}" target="_blank">GitHub</a><a href="${D.linkedin}" target="_blank">LinkedIn</a>`;
+$("links").innerHTML = `<a href="mailto:${D.email}">${D.email}</a><a href="${D.github}" target="_blank">GitHub</a>`;
 
 // Projects + carousel
 $("project-list").innerHTML = D.projects.map(p => `
